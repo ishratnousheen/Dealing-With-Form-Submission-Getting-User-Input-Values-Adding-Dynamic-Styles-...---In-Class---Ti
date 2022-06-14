@@ -1,26 +1,30 @@
 import React, { Component, useState } from "react";
 import "../styles/App.css";
-class Timer extends React.Component {
+
+class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { time: 0, x: 0, y: 0 };
+    this.state = {
+      text:
+        "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy",
+      click: 0
+    };
   }
-  componentDidMount() {
-    
-  }
-
-  componentWillUnmount() {
-    
-  }
-
-
 
   render() {
     return (
- <>
-</>
+      <div id="main">
+        {/* Do not remove this main div!! */}
+        <button
+          id="click"
+          onClick={() => this.setState({ count: this.state.count + 1 })}
+        >
+          Button
+        </button>
+        <h6 id="para">{this.state.text}</h6>
+      </div>
     );
   }
 }
 
-export default Timer;
+export default App;
